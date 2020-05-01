@@ -1,0 +1,26 @@
+# Binary files
+*.exe
+*.dll
+*.manifest
+*.pdb
+*.lnk
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Logs
+[Ll]og/
+*.log
+UpgradeLog.*
+_UpgradeReport_Files/
+
+# Visual Studio files
+*.suo
+*.user
+*.cache
+.vs*/
