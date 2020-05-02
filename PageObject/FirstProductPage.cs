@@ -17,7 +17,8 @@ namespace Team_3_Test.PageObject
 		}
 		public void CloseDialogCart()
 		{
-			//Driver.FindElement(By.Id("blockcart-modal")).Click();
+			Driver.SwitchTo().ActiveElement();
+			//Driver.FindElement(By.Id("blockcart-modal"));
 		}
 
 	}

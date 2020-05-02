@@ -20,6 +20,7 @@ namespace Team_3_Test.PageObject
 		public void SearchFor(string input)
 		{
 			Driver.FindElement(by: SearchField).SendKeys(input);
+			Driver.FindElement(By.XPath("//div[@id='search_widget']//i[@class='material-icons search']")).Click();
 		}
 	}
 }

@@ -22,9 +22,10 @@ namespace Team_3_Test.Tests
 		}
 
 		[Test]
-		public void AddToCartFromFrame()
+		public void AddToCartFromModal()
 		{
 			MainPage mainPage = new MainPage(webdriver);
+			mainPage.OpenModal();
 
 		}
 
