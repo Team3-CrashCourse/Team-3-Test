@@ -1,18 +1,14 @@
-﻿using System.Threading;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Team_3_Test.PageObject
 {
-    public class Header: PageObjectBase
-    {
-        private static readonly By SignInButton = By.ClassName("user-info");
-
-        public Header(IWebDriver driver) : base(driver){ }
-
-        public void ClickOnSignIn()
-        {
-            Driver.FindElement(by: SignInButton).Click();
-        }
-    }
+	class MainPage : PageObjectBase
+	{
+		public MainPage(IWebDriver driver) : base(driver) { }
+	}
 }
