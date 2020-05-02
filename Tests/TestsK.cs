@@ -16,18 +16,24 @@ namespace Team_3_Test.Tests
 		public void AddToCartFromPage()
 		{
 			MainPage mainPage = new MainPage(webdriver);
+			FirstProductPage productPage = mainPage.OpenProductPage();
+			productPage.AddToCart();
+			productPage.CloseDialogCart();
 		}
+
 		[Test]
 		public void AddToCartFromFrame()
 		{
 			MainPage mainPage = new MainPage(webdriver);
+
 		}
+
 		[TestCase("art")]
 		[TestCase("123")]
 		public void TestSearch(string searchfor)
 		{
-			Header pageObject = new Header(webdriver);
-
+			Header header = new Header(webdriver);
+			header.SearchFor(searchfor);
 		}
 	}
 }

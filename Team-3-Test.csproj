@@ -63,6 +63,7 @@
     <Compile Include="PageObject\Header.cs" />
     <Compile Include="PageObject\MainPage.cs" />
     <Compile Include="PageObject\PageObiectBase.cs" />
+    <Compile Include="PageObject\ProductPage.cs" />
     <Compile Include="Tests\BaseTest.cs" />
     <Compile Include="Tests\TestM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
