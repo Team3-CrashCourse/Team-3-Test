@@ -17,10 +17,11 @@ namespace Team_3_Test.PageObject
             Driver.FindElement(by: SignInButton).Click();
         }
 
-		public void SearchFor(string input)
+		public MainPage SearchFor(string input)
 		{
 			Driver.FindElement(by: SearchField).SendKeys(input);
 			Driver.FindElement(By.XPath("//div[@id='search_widget']//i[@class='material-icons search']")).Click();
+			return new MainPage(Driver);
 		}
 	}
 }

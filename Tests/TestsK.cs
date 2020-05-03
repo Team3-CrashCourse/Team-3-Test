@@ -30,12 +30,13 @@ namespace Team_3_Test.Tests
 			mainPage.CloseModalWindow();
 		}
 
-		[TestCase("art")]
-		[TestCase("123")]
-		public void TestSearch(string searchfor)
+		[TestCase(true, "art")]
+		[TestCase(false, "123")]
+		public void TestSearch(bool isOk, string searchfor)
 		{
 			Header header = new Header(webdriver);
-			header.SearchFor(searchfor);
+			bool isSearchOk = header.SearchFor(searchfor).IsSearchOk();
+			Assert.That(isSearchOk, Is.EqualTo(isOk), $"Search was {(isSearchOk? "successful" : "unsuccessful")}");
 		}
 	}
 }
