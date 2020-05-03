@@ -27,6 +27,7 @@ namespace Team_3_Test.Tests
             webdriver.Navigate().GoToUrl(Framework.Setting.Url);
         }
 
-		
+		[OneTimeTearDown]
+		public void OneTimeTearDown() => webdriver.Quit();
 	}
 }

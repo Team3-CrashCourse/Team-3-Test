@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Team_3_Test.Framework;
 
 namespace Team_3_Test.PageObject
 {
