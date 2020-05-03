@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Team_3_Test.PageObject
 	{
 		private static readonly By firstImage = By.XPath("//img[@alt='Hummingbird printed t-shirt']");
 		private static readonly By firstImageModal = By.XPath("//article[@data-id-product='1']//a[@class='quick-view']");
+		private static readonly By SignInButton = By.ClassName("user-info");
 
 		public MainPage(IWebDriver driver) : base(driver) { }
 
@@ -48,6 +50,12 @@ namespace Team_3_Test.PageObject
 			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
 			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.Id("content-wrapper")).Any());
 			return isOk;
+		}
+
+		public LogInPage ClickOnSignIn()
+		{
+			Driver.FindElement(by: SignInButton).Click();
+			return new LogInPage(Driver); 
 		}
 	}
 }
