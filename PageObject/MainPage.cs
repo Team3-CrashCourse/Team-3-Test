@@ -53,6 +53,12 @@ namespace Team_3_Test.PageObject
 			return isOk;
 		}
 
+		public void CheckCart()
+		{
+			Thread.Sleep(3000);
+			Driver.FindElement(By.ClassName("blockcart")).Click();
+		}
+
 		public LogInPage ClickOnSignIn()
 		{
 			Driver.FindElement(by: SignInButton).Click();
