@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Team_3_Test.PageObject
@@ -17,9 +18,8 @@ namespace Team_3_Test.PageObject
 		}
 		public void CloseDialogCart()
 		{
-			Driver.SwitchTo().ActiveElement();
-			//Driver.FindElement(By.Id("blockcart-modal"));
+			Thread.Sleep(3000);
+			Driver.FindElement(By.ClassName("close")).Click();
 		}
-
 	}
 }

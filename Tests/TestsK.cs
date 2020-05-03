@@ -26,7 +26,8 @@ namespace Team_3_Test.Tests
 		{
 			MainPage mainPage = new MainPage(webdriver);
 			mainPage.OpenModal();
-
+			mainPage.BuyFromModalWindow();
+			mainPage.CloseModalWindow();
 		}
 
 		[TestCase("art")]

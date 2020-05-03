@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Team_3_Test.PageObject
@@ -25,7 +26,20 @@ namespace Team_3_Test.PageObject
 		{
 			Actions action = new Actions(Driver);
 			action.MoveToElement(Driver.FindElement(firstImageModal)).Perform();
+			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
 			Driver.FindElement(firstImageModal).Click();
+		}
+
+		public void BuyFromModalWindow()
+		{
+			Thread.Sleep(3000);
+			Driver.FindElement(By.ClassName("add-to-cart")).Submit();
+		}
+
+		public void CloseModalWindow()
+		{
+			Thread.Sleep(3000);
+			Driver.FindElement(By.ClassName("close")).Click();
 		}
 	}
 }
