@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Team_3_Test.Framework;
 
 namespace Team_3_Test.PageObject
 {
-	class MainPage : PageObjectBase
+	public class MainPage : PageObjectBase
 	{
 		private static readonly By firstImage = By.XPath("//img[@alt='Hummingbird printed t-shirt']");
 		private static readonly By firstImageModal = By.XPath("//article[@data-id-product='1']//a[@class='quick-view']");
@@ -40,6 +41,13 @@ namespace Team_3_Test.PageObject
 		{
 			Thread.Sleep(3000);
 			Driver.FindElement(By.ClassName("close")).Click();
+		}
+
+		public bool IsSearchOk()
+		{
+			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.Id("content-wrapper")).Any());
+			return isOk;
 		}
 	}
 }

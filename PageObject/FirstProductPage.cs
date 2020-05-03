@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Team_3_Test.PageObject
 {
-	class FirstProductPage : PageObjectBase
+	public class FirstProductPage : PageObjectBase
 	{
 		public FirstProductPage(IWebDriver driver) : base(driver) { }
 
