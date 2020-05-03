@@ -50,5 +50,21 @@ namespace Team_3_Test.PageObject
 			Driver.FindElement(by: CreateAccountLink).Click();
 			return new RegistrationPage(Driver);
 		}
+
+		public YourAccountPage lognIn(string email, string passw)
+		{
+			Driver.FindElement(by: EmailInput).Click();
+			Driver.FindElement(by: EmailInput).SendKeys(email);
+			Driver.FindElement(by: PasswordInput).Click();
+			Driver.FindElement(by: PasswordInput).SendKeys(passw);
+			Driver.FindElement(by: SignInButton).Click();
+			return new YourAccountPage(Driver);
+		}
+
+		public LogInPage ClickForgotPasswLink()
+		{
+			Driver.FindElement(by: ForgotPasswLink).Click();
+			return this;
+		}
 	}
 }

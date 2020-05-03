@@ -15,7 +15,5 @@ namespace Team_3_Test.PageObject
 			Driver.FindElement(by: SignInButton).Click();
 			return new LogInPage(Driver); 
 		}
-
-		
 	}
 }
