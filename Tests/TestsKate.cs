@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace Team_3_Test.Tests
 {
 	[TestFixture]
-	class TestsK : BaseTest
+	class TestsKate : BaseTest
 	{
 		[Test]
 		public void AddToCartFromPage()
@@ -19,6 +19,7 @@ namespace Team_3_Test.Tests
 			FirstProductPage productPage = mainPage.OpenProductPage();
 			productPage.AddToCart();
 			productPage.CloseDialogCart();
+			productPage.CheckCart();
 		}
 
 		[Test]
@@ -28,6 +29,7 @@ namespace Team_3_Test.Tests
 			mainPage.OpenModal();
 			mainPage.BuyFromModalWindow();
 			mainPage.CloseModalWindow();
+			mainPage.CheckCart();
 		}
 
 		[TestCase(true, "art")]

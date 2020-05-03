@@ -29,7 +29,8 @@ namespace Team_3_Test.PageObject
 		{
 			Actions action = new Actions(Driver);
 			action.MoveToElement(Driver.FindElement(firstImageModal)).Perform();
-			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
+			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+			Wait.WaitFor(() => Driver.FindElements(firstImageModal).Any());
 			Driver.FindElement(firstImageModal).Click();
 		}
 
@@ -48,8 +49,14 @@ namespace Team_3_Test.PageObject
 		public bool IsSearchOk()
 		{
 			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.Id("content-wrapper")).Any());
+			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.ClassName("select-title")).Any());
 			return isOk;
+		}
+
+		public void CheckCart()
+		{
+			Thread.Sleep(3000);
+			Driver.FindElement(By.ClassName("blockcart")).Click();
 		}
 
 		public LogInPage ClickOnSignIn()
