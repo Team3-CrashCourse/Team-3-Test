@@ -48,7 +48,7 @@ namespace Team_3_Test.PageObject
 		public bool IsSearchOk()
 		{
 			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.Id("content-wrapper")).Any());
+			bool isOk = Wait.WaitFor(() => Driver.FindElements(By.ClassName("select-title")).Any());
 			return isOk;
 		}
 
