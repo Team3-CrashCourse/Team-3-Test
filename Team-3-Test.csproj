@@ -66,7 +66,7 @@
     <Compile Include="PageObject\PageObiectBase.cs" />
     <Compile Include="PageObject\RegistrationPage.cs" />
     <Compile Include="Tests\BaseTest.cs" />
-    <Compile Include="Tests\TestsPodoborizhna.cs" />
+    <Compile Include="Tests\TestsMarianaP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
