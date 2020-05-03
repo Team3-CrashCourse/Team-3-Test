@@ -15,16 +15,19 @@ namespace Team_3_Test.Tests
         protected void DoBeforeAllTests()
         {
             webdriver = new ChromeDriver();
-
         }
 
-        [SetUp]
+		[OneTimeTearDown]
+		public void OneTimeTearDown() => webdriver.Quit();
+
+		[SetUp]
         protected void DoBeforeEach()
         {
             webdriver.Manage().Window.Maximize();
             webdriver.Navigate().GoToUrl(Framework.Setting.Url);
         }
 
-		
+		[OneTimeTearDown]
+		public void OneTimeTearDown() => webdriver.Quit();
 	}
 }

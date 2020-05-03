@@ -21,5 +21,10 @@ namespace Team_3_Test.PageObject
 			Thread.Sleep(3000);
 			Driver.FindElement(By.ClassName("close")).Click();
 		}
+
+		public void CheckCart()
+		{
+			Driver.FindElement(By.ClassName("blockcart")).Click();
+		}
 	}
 }
