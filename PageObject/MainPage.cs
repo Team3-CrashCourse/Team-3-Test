@@ -29,7 +29,8 @@ namespace Team_3_Test.PageObject
 		{
 			Actions action = new Actions(Driver);
 			action.MoveToElement(Driver.FindElement(firstImageModal)).Perform();
-			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);
+			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+			Wait.WaitFor(() => Driver.FindElements(firstImageModal).Any());
 			Driver.FindElement(firstImageModal).Click();
 		}
 
