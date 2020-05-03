@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace Team_3_Test.Tests
 {
 	[TestFixture]
-	class TestsK : BaseTest
+	class TestsKate : BaseTest
 	{
 		[Test]
 		public void AddToCartFromPage()
