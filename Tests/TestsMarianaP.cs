@@ -60,6 +60,5 @@ namespace Team_3_Test.Tests
 			webdriver.Navigate().Back();
 			yourAccount.ClickSignOutLink();
 		}
-
 	}
 }

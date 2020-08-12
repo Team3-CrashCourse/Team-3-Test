@@ -7,25 +7,25 @@ using NUnit.Framework;
 
 namespace Team_3_Test.Tests
 {
-    public class BaseTest
-    {
-        protected IWebDriver webdriver;
+	public class BaseTest
+	{
+		protected IWebDriver webdriver;
 
-        [OneTimeSetUp]
-        protected void DoBeforeAllTests()
-        {
-            webdriver = new ChromeDriver();
-        }
+		[OneTimeSetUp]
+		protected void DoBeforeAllTests()
+		{
+			webdriver = new ChromeDriver();
+		}
 
 		[OneTimeTearDown]
 		public void OneTimeTearDown() => webdriver.Quit();
 
 		[SetUp]
-        protected void DoBeforeEach()
-        {
-            webdriver.Manage().Window.Maximize();
-            webdriver.Navigate().GoToUrl(Framework.Setting.Url);
-        }
+		protected void DoBeforeEach()
+		{
+			webdriver.Manage().Window.Maximize();
+			webdriver.Navigate().GoToUrl(Framework.Setting.Url);
+		}
 
 		[OneTimeTearDown]
 		public void OneTimeTearDown() => webdriver.Quit();
