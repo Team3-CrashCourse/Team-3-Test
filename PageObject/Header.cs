@@ -4,18 +4,17 @@ using OpenQA.Selenium.Chrome;
 
 namespace Team_3_Test.PageObject
 {
-    public class Header: PageObjectBase
-    {
-        private static readonly By SignInButton = By.ClassName("user-info");
+	public class Header: PageObjectBase
+	{
+		private static readonly By SignInButton = By.ClassName("user-info");
 		private static readonly By SearchField = By.ClassName("ui-autocomplete-input");
-
 
 		public Header(IWebDriver driver) : base(driver){ }
 
-        public void ClickOnSignIn()
-        {
-            Driver.FindElement(by: SignInButton).Click();
-        }
+		public void ClickOnSignIn()
+		{
+			Driver.FindElement(by: SignInButton).Click();
+		}
 
 		public MainPage SearchFor(string input)
 		{
